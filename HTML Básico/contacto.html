@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    <title>Digicard | Contacto</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="https://digicard.net" target="_blank"><img class="logo" src="assets/img/logodigicard.png"></a>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="https://digicard.net" target="_blank">Website</a>
+                <a href="mailto:fcaminos@digicard.net?subject=Contacto&body=prueba email">Email</a>
+            </div>
+</div>
+<hr id="separadorlogo" class="separador">
+
+<div class="contact_form">
+
+    <div class="formulario">			
+            <h1>Contactanos</h1>
+            <h3>Envíanos tu mensaje y responderemos en la brevedad.</h3>
+            <br>
+                <form action="" method="POST">				                 
+                            <p>
+                                <label for="nome" class="colocar_nome">Nombre
+                                    <span class="marca-obligatoria">*</span>
+                                </label>
+                                    <input type="text" name="introducir_nombre" id="nombre" required="marca-obligatoria" placeholder="Tu nombre">
+                            </p>
+                        
+                            <p>
+                                <label class="">Email
+                                    <span class="marca-obligatoria">*</span>
+                                </label>
+                                    <input type="email" name="introducir_email" id="email" required="marca-obligatoria" placeholder="Tu email">
+                            </p>
+                    
+                            <p>
+                                <label>Teléfono
+                                </label>
+                                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Tu número de teléfono">
+                            </p>			
+                        
+                            <p>
+                                <label>Asunto
+                                    <span class="marca-obligatoria">*</span>
+                                </label>
+                                    <input type="text" name="introducir_asunto" id="asunto" required="marca-obligatoria" placeholder="¿Qué queres decir?">
+                            </p>		
+                        
+                            <p>
+                                <label>Mensaje
+                                    <span class="marca-obligatoria">*</span>
+                                </label>                     
+                                     <textarea name="introducir_mensaje" id="mensaje" required="marca-obligatoria" placeholder="Escribí tu mensaje acá."></textarea> 
+                               </p>	  								
+                        
+                            <button type="submit"><p>Enviar</p></button>
+
+                            <p class="aviso">
+                                <span class="marca-obligatoria">* </span>Es obligatorio completar estos campos.
+                            </p>					
+                </form>
+    </div>	
+</div>
+</body>
+</html>

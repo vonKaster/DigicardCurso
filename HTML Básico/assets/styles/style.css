@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 body {
 
     font-family: "Righteous", sans-serif;
@@ -5,20 +9,24 @@ body {
 
 }
 
+h1, h2, h3, h4 {
+
+    color: #005CBF;
+
+}
+
 .separador {
-    
     margin-top: 40px;
     margin-bottom: 40px;
-    border-top: 2px solid #bbb;
+    border-top: 2px solid rgb(184, 184, 184);
 
 }
 
 .links a, a:visited {
+    margin: 0 10px;
     color: white;
-    margin: 15px;
     text-decoration: none;
-    background-color: #005CBF;
-    padding: 10px;
+    padding: 19px;
     font-size: 20px;
 
 }
@@ -66,6 +74,151 @@ body {
     background-color: #dada5ecb;
 }
 
-ul {
-    text-align: left;
+
+.navbar {
+    display: flex;
+    width: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(12,116,204,1) 60%, rgba(12,116,204,1) 100%, rgba(12,116,204,1) 100%);
+    justify-content: space-between;
+    align-items: center;
 }
+
+#separadorlogo {
+
+    margin-top: 0!important;
+}
+
+.lista {
+
+    display: inline-block;
+    text-align: left;
+
+}
+
+
+.flex {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Contacto */
+
+.contact_form {	
+
+    width: 500px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px; 
+	text-align: left; 
+	padding-top: 30px;
+	padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+
+}
+
+
+input {
+
+	background-color: #fbfbfb; 
+	width: 408px; 
+	height: 40px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #226cbb; 
+	margin-top: 10px;  
+	padding-left: 10px;
+    margin-bottom: 20px; 
+
+}
+
+
+textarea {
+
+    background-color: #fbfbfb; 
+	width: 405px; 
+	height: 150px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #226cbb; 
+	margin-top: 10px;  
+	padding-left: 10px;
+    margin-bottom: 20px; 
+     padding-top: 15px; 
+
+}
+
+
+label {
+    
+    display: block; 
+	float: center; 	
+
+}
+
+
+button {
+
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color: #226cbb; 
+	border-color: #226cbb; 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 420px;   
+    cursor: pointer;
+
+}
+
+
+button p {
+
+	color: #fff; 
+
+}
+
+
+.marca-obligatoria {
+
+	color: #ec576b; 
+
+}
+
+
+.aviso {
+    
+	font-size: 14px;  
+	color: #0e0e0e;  
+
+}
+
+
+p {
+
+	font-size: 18px; 
+	color: #0e0e0e; 
+
+}
+
+.formulario input:focus { 
+
+	outline:0;
+	border: 1px solid #07EEE7;
+
+}
+
+.formulario textarea:focus {
+
+	outline:0;
+	border: 1px solid #07EEE7;
+
+}
+
