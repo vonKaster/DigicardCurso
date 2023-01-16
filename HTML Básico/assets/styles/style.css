@@ -1,0 +1,71 @@
+body {
+
+    font-family: "Righteous", sans-serif;
+    text-align: center;
+
+}
+
+.separador {
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 2px solid #bbb;
+
+}
+
+.links a, a:visited {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    background-color: #005CBF;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.links a:hover {
+
+    background-color: #226cbb;
+
+}
+
+.TablaTrainees {
+    width: 60%;
+}
+
+.TablaTrainees, .TablaTrainees th, .TablaTrainees td {
+
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+
+}
+
+.TablaTrainees caption {
+
+    color: #005CBF;
+    font-size: 25px;
+    margin-bottom: 10px;
+
+}
+
+.TablaTrainees th {
+
+    color: white;
+    background-color: #226cbb;
+
+}
+
+.TablaTrainees tr:nth-child(even) {
+    background-color: #66b1fccb;
+}
+
+.TablaTrainees tr:nth-child(odd) {
+    background-color: #dada5ecb;
+}
+
+ul {
+    text-align: left;
+}
