@@ -33,7 +33,6 @@ h1, h2, h3, h4 {
 }
 
 .links a, a:visited {
-    margin: 0 10px;
     color: white;
     text-decoration: none;
     padding: 19px;
@@ -84,15 +83,27 @@ h1, h2, h3, h4 {
     background-color: #dada5ecb;
 }
 
+nav {
+    display: flex;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    overflow-y: auto;
+}
 
 .navbar {
     font-family: "Righteous", sans-serif;
     display: flex;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    overflow-y: auto;
     width: 100%;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(12,116,204,1) 60%, rgba(12,116,204,1) 100%, rgba(12,116,204,1) 100%);
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid rgb(184, 184, 184);
 }
 
 #separadorlogo {
@@ -107,7 +118,6 @@ h1, h2, h3, h4 {
 
 }
 
-
 .flex {
 
     display: flex;
@@ -117,6 +127,12 @@ h1, h2, h3, h4 {
 .logo {
     margin-left: auto;
     margin-right: auto;
+}
+
+.espaciador {
+
+    margin-top: 2000px;
+
 }
 
 /* CONTACTO */
@@ -281,3 +297,38 @@ h1, h2, h3, h4 {
     width: 40%;
 
 }
+
+/* Google Icons */
+
+.material-icons, .material-icons-round, .material-icons-sharp, .material-icons-outlined, .material-icons-two-tone {
+    
+    margin-right: 5px;
+    vertical-align: text-bottom;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
