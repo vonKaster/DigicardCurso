@@ -6,85 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <title>Digicard | Home</title>
 </head>
 <body>
-    <div class="navbar">
-            <a href="https://digicard.net" target="_blank"><img class="logo" src="assets/img/logodigicard.png"></a>
-                <div class="links">
-                    <a href="index.html">Home</a>
-                    <a href="contacto.html">Contacto</a>
-                    <a href="https://digicard.net" target="_blank">Website</a>
-                    <a href="mailto:fcaminos@digicard.net?subject=Contacto&body=prueba email">Email</a>
-                </div>
-    </div>
-    <hr id="separadorlogo" class="separador">
+    <nav>
+        <div class="navbar">
+                <a href="index.html"><img src="assets/img/logodigicard.png"></a>
+                    <div class="links">
+                        <a href="index.html">Home</a>
+                        <a href="clientes.html">Clientes</a>
+                        <a href="contacto.html">Contacto</a>
+                        <a href="https://digicard.net" target="_blank">Website</a>
+                        <a href="mailto:fcaminos@digicard.net?subject=Contacto&body=prueba email">Email</a>
+                    </div>
+        </div>
+        <hr id="separadorlogo" class="separador">
+    </nav>
 
-    <table class="TablaTrainees">
-        <caption>Trainees</caption>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-        </tr>
-        <tr>
-            <td>Franco</td>
-            <td>Caminos</td>
-            <td>fcaminos@digicard.net</td>
-        </tr>
-        <tr>
-            <td>Juana</td>
-            <td>Molina</td>
-            <td>jmolina@digicard.net</td>
-        </tr>
-        <tr>
-            <td>Juan Ignacio</td>
-            <td>Guzman</td>
-            <td>jguzman@digicard.net</td>
-        </tr>
-    </table>
-        <hr class="separador">
-    <div class="flex">
-        <div>
-            <h2>Ejemplo Listas</h2>
-            <br>
-            <h3>Desordenada</h3>
-            <br>
-                <ul class="lista">
-                    <li>Franco</li>
+    <section>
+        <table class="TablaTrainees">
+            <caption>Trainees</caption>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>Franco</td>
+                <td>Caminos</td>
+                <td>fcaminos@digicard.net</td>
+            </tr>
+            <tr>
+                <td>Juana</td>
+                <td>Molina</td>
+                <td>jmolina@digicard.net</td>
+            </tr>
+            <tr>
+                <td>Juan Ignacio</td>
+                <td>Guzman</td>
+                <td>jguzman@digicard.net</td>
+            </tr>
+        </table>
+    </section>
+    <hr class="separador">
+
+    <section>
+        <div class="flex">
+            <div>
+                <h2>Ejemplo Listas</h2>
+                <br>
+                <h3>Desordenada</h3>
+                <br>
+                    <ul class="lista">
+                        <li>Franco</li>
+                            <ul>
+                                <li>Sexo: Masculino</li>
+                            </ul>
+                        <li>Juana</li>
+                        <ul>
+                            <li>Sexo: Femenino</li>
+                        </ul>
+                        <li>Juan Ignacio</li>
                         <ul>
                             <li>Sexo: Masculino</li>
                         </ul>
-                    <li>Juana</li>
-                    <ul>
-                        <li>Sexo: Femenino</li>
                     </ul>
-                    <li>Juan Ignacio</li>
-                    <ul>
-                        <li>Sexo: Masculino</li>
-                    </ul>
-                </ul>
-            <br>
-            <br>
-            <h3>Ordenada</h3>
-            <br>
-                <ol class="lista">
-                    <li>Hacer curso de Udemy</li>
-                    <li>Francia</li>
-                    <li>Comer</li>
-                    <li>Dormir</li>
-                    <li>Repetir todo lo anterior</li>
-                </ol>
-        </div> 
-        <div>
-            <h3>iFrame</h3>
-            <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/uYuUFhW7Vi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>    
-    </div>
-     <hr class="separador">
+                <br>
+                <br>
+                <h3>Ordenada</h3>
+                <br>
+                    <ol class="lista">
+                        <li>Hacer curso de Udemy</li>
+                        <li>Francia</li>
+                        <li>Comer</li>
+                        <li>Dormir</li>
+                        <li>Repetir todo lo anterior</li>
+                    </ol>
+            </div> 
+
+            <div>
+                <h3>iFrame</h3>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uYuUFhW7Vi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </section>
+    <hr class="separador">
+
 </body>
 </html>
