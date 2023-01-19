@@ -41,8 +41,6 @@ function Persona(firstName, lastName, email, age, idiom){ // Función constructo
     }
 }
 
-
-
 let lionelMessi = new Persona("Lionel", "Messi", "messi@gmail.com", 35, "es");
 console.log(lionelMessi);
 console.log(lionelMessi.fullName());
@@ -62,11 +60,25 @@ console.log(personaArray, typeof(personaArray));
 let personaString = JSON.stringify(persona); // Convertir en String las propiedades del objeto
 console.log(personaString, typeof(personaString));
 
+let persona2 = {
+    firstName: "Daniel",
+    lastName: "Macchiavello",
+    fullName: function(job, address){
+        return this.firstName + " " + this.lastName + " " + job + " " + address;
+    }
 
-let persona2 = new Object(); // Crea un nuevo objeto y asigna memoria para el mismo
-persona2.nombre = "Franco";
-persona2.direccion = "Avenida Siempreviva 742"
+    }
 
-delete persona2.direccion; // Borrar propiedad de un objeto
-console.log(persona2);
+let persona3 = new Object(); // Crea un nuevo objeto y asigna memoria para el mismo
+persona3.firstName = "Cecilia";
+persona3.lastName = "Dragonetti";
+persona3.address = "Avenida Siempreviva 742";
+console.log(persona3);
+console.log(persona2.fullName.call(persona3, "Programmer", "Avenida Illia 2942")); // Utilizo el método "fullName" no existente en "persona3", llamándolo con call desde "persona2"
+
+let array = ["Programmer", "Av Olazabal 2294"]
+console.log(persona2.fullName.apply(persona3, array)); // Paso los argumentos como un array para que funcione el método "Apply"
+
+delete persona2.address; // Borrar propiedad de un objeto
+console.log(persona3);
 
