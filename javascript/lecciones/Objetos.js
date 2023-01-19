@@ -30,16 +30,24 @@ console.log(persona.language);
 persona.language = "en"; // Uso mi setter y cambio el valor
 console.log(persona.language);
 
-function Persona(firstName, lastName, email, age, idiom){
+function Persona(firstName, lastName, email, age, idiom){ // Función constructor
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
     this.age = age;
     this.idiom = idiom;
+    this.fullName = function(){
+        return this.firstName + " " + this.lastName;
+    }
 }
+
+
 
 let lionelMessi = new Persona("Lionel", "Messi", "messi@gmail.com", 35, "es");
 console.log(lionelMessi);
+console.log(lionelMessi.fullName());
+
+Persona.prototype.tel; // Agregar una propiedad global para todos los objetos tipo "Persona"
 
 for(nombrePropiedad in persona){
 
