@@ -155,13 +155,87 @@
 
         </div>
     </section>
+    <hr class="separador">
+
+    <section>
+        <div class="flex">
+            <div class="DOM">
+                <h2 id="tituloDom">Manejo del DOM (clickeame)</h2>
+                <br>
+                <h3 class="amarillo" id="titulo">Hola, soy un título (y me muestro por consola)</h2>
+                <p class="" id="parrafo">Hola, soy un párrafo</p>
+                <p class="amarillo" id="parrafo2">Hola, soy otro párrafo</p>
+                <p onclick="cookies()" id="cookies">Clickeame para conocer el estado de las cookies</p>
+                <p onmousedown="mouseDown(this)" onmouseup="mouseUp(this)">¡No mantengas el click sobre mí! >:/</p>    
+               
+            </div> 
+
+        </div>
+    </section>
+
     <footer>
         <div class="contenedor-footer">
             <br>
-                <h2>Hecho con <i class="material-icons-round">favorite</i> por Franco Caminos</h2>
+                <h2>Hecho con <i onmouseover="colorMouseOver(this)" onmouseout="colorMouseOut(this)" class="material-icons-round">favorite</i> por Franco Caminos</h2>
             <br>
 
         </div>
     </footer>
+
+    <script>
+        let title = document.getElementById("titulo"); // Obtengo un elemento mediante su id
+        // let amarillo = document.getElementsByClassName("amarillo"); | lo mismo mediante su clase CSS
+        let paragraph = document.getElementById("parrafo"); 
+        console.log(`Valor del título: ${titulo.innerHTML}`); // innerHTML obtiene el valor del elemento
+        console.log(`Valor del párrafo: ${parrafo.innerHTML}`);
+        title.innerHTML = "Título modificado desde JS"; // Modifico el valor del título
+        paragraph.innerHTML = "Párrafo modificado desde JS";
+
+        let paragraphs = document.getElementsByTagName("p"); // Obtengo todos los elementos de etiqueta "p"
+        console.log(`N° de párrafos: ${paragraphs.length}`)
+
+        let query = document.querySelectorAll("p.amarillo"); // Obtengo todos los elementos de etiqueta "p" y la clase "amarillo"
+        console.log(`N° de párrafos con la clase "amarillo": ${query.length}`)
+
+    </script>
+
+    <script>
+        document.getElementById("tituloDom").onclick = changeTextDOM;
+        function changeTextDOM(text){
+            document.getElementById("tituloDom").innerHTML = "Manejo del DOM (Actualizado con JS)"
+            document.getElementById("tituloDom").style.color = "#dada5ecb";
+        }
+
+        function cookies(){
+            alert("Analizando...");
+            let text = "";
+            if(navigator.cookieEnabled){
+                text = "Las cookies están habilitadas";
+            } else {
+                text = "Las cookies están deshabilitadas";
+            }
+            document.getElementById("cookies").innerHTML = text;
+        }
+
+        function colorMouseOver(text){
+            text.style.color = "red";
+        }
+        
+        function colorMouseOut(text){
+            text.style.color = "white";
+        }
+
+        function mouseDown(text){
+            text.innerHTML = "Deja de apretarme, ¡soltameee!"
+            text.style.fontWeight = "bold";
+        }
+
+        function mouseUp(text){
+            text.innerHTML = "¡No mantengas el click sobre mí! >:/"
+            text.style.fontWeight = "400";
+        }
+        
+    </script>
+
 </body>
 </html>

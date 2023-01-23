@@ -39,7 +39,7 @@
                     <h1>Contactanos</h1>
                     <h3>Envíanos tu mensaje y responderemos en la brevedad.</h3>
                     <br>
-                        <form action="" method="get">				                 
+                        <form id="formulario_unico">				                 
                                     <p>
                                         <label for="nombre marca-obligatoria">Nombre
                                             <span class="marca-obligatoria"></span>
@@ -51,45 +51,86 @@
                                         <label for="email">Email
                                             <span class="marca-obligatoria"></span>
                                         </label>
-                                            <input type="email" name="email" id="email" required="marca-obligatoria" placeholder="Tu email">
+                                            <input onfocus="changeBackground(this)" onblur="returnBackground(this)" type="email" name="email" id="email" required="marca-obligatoria" placeholder="Tu email">
                                     </p>
                             
                                     <p>
                                         <label for="telefono">Teléfono
                                         </label>
-                                            <input type="tel" name="telefono" id="telefono" placeholder="Tu número de teléfono">
+                                            <input onfocus="changeBackground(this)" onblur="returnBackground(this)" type="tel" name="telefono" id="telefono" placeholder="Tu número de teléfono">
                                     </p>			
                                 
                                     <p>
                                         <label for="asunto">Asunto
                                             <span class="marca-obligatoria"></span>
                                         </label>
-                                            <input type="text" name="asunto" id="asunto" required="marca-obligatoria" placeholder="¿Qué queres decir?">
+                                            <input onfocus="changeBackground(this)" onblur="returnBackground(this)" onchange="upper(this)" type="text" name="asunto" id="asunto" required="marca-obligatoria" placeholder="¿Qué queres decir?">
                                     </p>		
                                 
                                     <p>
                                         <label for="mensaje">Mensaje
                                             <span class="marca-obligatoria"></span>
                                         </label>                     
-                                            <textarea name="mensaje" id="mensaje" required="marca-obligatoria" placeholder="Escribí tu mensaje acá."></textarea> 
+                                            <textarea onfocus="changeBackground(this)" onblur="returnBackground(this)" name="mensaje" id="mensaje" required="marca-obligatoria" value="Hola, soy Fran" placeholder="Escribí tu mensaje acá."></textarea> 
                                     </p>
-                                    
+
                                     <label>Departamento
                                             <span class="marca-obligatoria"></span>
                                         </label>   
                                         <br>
                                         <label>Negocios</label>
-                                        <input type="radio" id="negocios" name="departamento" value="negocios"> 
+                                        <input type="radio" id="negocios" value="negocios" name="departamento"> 
                                         <label>RRHH</label>
-                                        <input type="radio" id="rrhh" name="departamento" value="rrhh">         
-
+                                        <input type="radio" id="rrhh" value="rrhh" name="departamento">         
+  
                                     <button type="submit"><p>Enviar</p></button>
-
+                                    <button onclick="showValues()" type="button"><p>Mostrar</p></button> 
                                     <p class="aviso">
                                         <span class="marca-obligatoria"></span>Es obligatorio completar estos campos.
-                                    </p>					
+                                    </p>			
                         </form>
             </div>	
+            <br>
+            <div id="values"></div>
+            <script>
+                function showValues(){
+                    let form = document.forms["formulario_unico"]; // Obtengo el formulario
+                    let text = "";
+                    for(let element of form){
+                        text += element.value + "<br>"; // guardo en "text" todos los .value que existan dentro del form
+                    }
+                    document.getElementById("values").innerHTML = text;
+                    let name = form["nombre"]; 
+                    console.log(name);
+                }
+
+                function upper(text){
+                    text.value = text.value.toUpperCase();
+                }
+
+                function changeBackground(input){
+                    input.style.background = "#226cbb52"
+                }
+
+                function returnBackground(input){
+                    input.style.background = "none"
+                }
+            </script>
+
+            <script>
+
+                function returnBackgroundOnlyJS(event){
+                    let component = event.target;
+                    component.style.background = "none"
+                }
+
+                document.getElementById("nombre").addEventListener("focus", (event) => { // Con función flecha
+                    event.target.style.background = "#226cbb52"
+                })
+
+                document.getElementById("nombre").addEventListener("blur", returnBackgroundOnlyJS) // Sin función flecha
+            </script>
+
         </div>
     </main>    
 </body>
