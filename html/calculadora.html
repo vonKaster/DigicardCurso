@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    <title>Digicard | Calculadora</title>
+</head>
+<body> <!-- no usé bootstrap porq me rompía muchos estilos -->
+    <nav>
+        <div class="navbar">
+                    <a href="index.html"><img src="assets/img/logodigicard.png"></a>
+                        <div class="links">
+                            <a href="index.html">
+                                <i class="material-icons-round">home</i>Home
+                            </a>
+                            <a href="clientes.html">
+                                <i class="material-icons-round">person</i>Clientes
+                            </a>
+                            <a href="calculadora.html">
+                                <i class="material-icons-round">calculate</i>Calculadora
+                            </a>
+                            <a href="contacto.html">
+                                <i class="material-icons-round">support_agent</i>Contacto
+                            </a>
+                            <a href="mailto:fcaminos@digicard.net?subject=Contacto&body=prueba email">
+                                <i class="material-icons-round">mail</i>Email
+                            </a>
+                        </div>
+        </div>
+    </nav>
+
+    <div class="contact_form">
+        <div class="formulario">			
+                <h1>Calculadora</h1>
+                <br>
+                    <form class="formc" id="formc">				                 
+                                <p>
+                                    <label for="usuario">Número 1</label>
+                                    <input type="number" id="num1">
+                                </p>
+                                
+                                <p>
+                                    <label for="usuario">Número 2</label>
+                                    <input type="number" id="num2">
+                                </p>
+
+                                <label for="">Operación</label>
+
+                                <div class="flexc">
+                                <button id="btnAdd" type="button" class="btn-calc"><i class="material-icons-round">add</i></button>
+                                <button id="btnSubs" type="button" class="btn-calc"><i class="material-icons-round">remove</i></button>
+                                <button id="btnMult" type="button" class="btn-calc"><i class="material-icons-round">close</i></button>
+                                <button id="btnDiv" type="button" class="btn-calc"><i class="material-icons-round">sort</i></button>
+                                </div>
+                            <div class="btnSubmit"> 
+                           <button id="btnSubmit" type="reset" onclick="calc();resetBtn()"><p>Calcular</p></button>
+                            </div>        
+                    </form>
+                    <h3 id="result"></3>
+        </div>	
+    </div>
+
+    <script>
+        var btn1 = document.getElementById("btnAdd");
+        var btn2 = document.getElementById("btnSubs");
+        var btn3 = document.getElementById("btnMult");
+        var btn4 = document.getElementById("btnDiv");
+        var btnsubmit = document.getElementById("btnSubmit");
+
+        document.getElementById('btnAdd').addEventListener("click", function(){
+        
+        if(btn1.classList.contains("btn-add")){
+            btn1.classList.remove("btn-add");
+        } else if(!btn1.classList.contains("btn-add")){
+            btn1.classList.toggle("btn-add");
+            btn2.classList.remove("btn-subs");
+            btn3.classList.remove("btn-mult");
+            btn4.classList.remove("btn-div");
+        };
+       });
+
+       document.getElementById('btnSubs').addEventListener("click", function(){
+        
+        if(btn2.classList.contains("btn-subs")){
+            btn2.classList.remove("btn-subs");
+        } else if(!btn2.classList.contains("btn-subs")){
+            btn2.classList.toggle("btn-subs");
+            btn1.classList.remove("btn-add");
+            btn3.classList.remove("btn-mult");
+            btn4.classList.remove("btn-div");
+        };
+       });
+
+       document.getElementById('btnMult').addEventListener("click", function(){
+        
+        if(btn3.classList.contains("btn-mult")){
+            btn3.classList.remove("btn-mult");
+        } else if(!btn3.classList.contains("btn-mult")){
+            btn3.classList.toggle("btn-mult");
+            btn1.classList.remove("btn-add");
+            btn2.classList.remove("btn-subs");
+            btn4.classList.remove("btn-div");
+        };
+       });
+
+       document.getElementById('btnDiv').addEventListener("click", function(){
+        
+        if(btn4.classList.contains("btn-div")){
+            btn4.classList.remove("btn-div");
+        } else if(!btn4.classList.contains("btn-div")){
+            btn4.classList.toggle("btn-div");
+            btn1.classList.remove("btn-add");
+            btn2.classList.remove("btn-subs");
+            btn3.classList.remove("btn-mult");
+        };
+       });
+
+       function resetBtn(){
+        btn1.classList.remove("btn-add");
+        btn2.classList.remove("btn-subs");
+        btn3.classList.remove("btn-mult");
+        btn4.classList.remove("btn-div");
+       }
+
+    </script>
+
+    <script src="assets/js/calculadora.js"></script>
+</body>
+</html>

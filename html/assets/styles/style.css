@@ -281,15 +281,13 @@ nav {
 .contact_form {	
 
     font-family: "Righteous", sans-serif;
-    width: 500px; 
+    width: 420px; 
     height: auto;
     margin: 80px auto;
     border-radius: 25px;
 	text-align: left; 
-	padding-top: 30px;
-	padding-bottom: 20px;  
+    padding: 30px 30px 20px 30px; 
     background-color: #fbfbfb; 
-    padding-left: 30px; 
 
 }
 
@@ -500,3 +498,55 @@ nav {
 .contenedor-footer i {
     margin: 0!important;
 }
+
+/* CALCULADORA */
+
+.flexc {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formc button {
+
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color: #a6a9ad; 
+	border-color: #a6a9ad; 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 70px!important;   
+    cursor: pointer;
+
+}
+
+.btnSubmit button {
+	background-color: #226cbb; 
+	border-color: #226cbb; 
+	width: 420px!important;   
+}
+
+.btn-add {
+    background-color: #0dbd0dc0!important;
+    border-color: #0dbd0dc0!important;
+}
+
+.btn-subs {
+    background-color: #c91010c0!important;
+    border-color: #c91010c0!important;
+}
+
+.btn-mult {
+    background-color: #9e10c9c0!important;
+    border-color: #9e10c9c0!important;
+}
+
+.btn-div {
+    background-color: #c96910c0!important;
+    border-color: #c96910c0!important;
+}
+
+
