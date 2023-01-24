@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-    <title>Digicard | Lista de Empleados</title>
+    <title>Digicard | Reloj</title>
 </head>
-<body onload="showPersons()">
+<body onload="showClock()">
     <nav>
         <div class="navbar">
                     <a href="index.html"><img src="assets/img/logodigicard.png"></a>
@@ -23,7 +23,7 @@
                             <a class="noActiveTab" href="clientes.html">
                                 <i class="material-icons-round">person</i>Clientes
                             </a>
-                            <a href="listaPersonas.html">
+                            <a class="noActiveTab" href="listaPersonas.html">
                                 <i class="material-icons-round">group</i>Lista de Empleados
                             </a>
                             <a class="noActiveTab" href="presupuestos.html">
@@ -35,43 +35,21 @@
                             <a class="noActiveTab" href="contacto.html">
                                 <i class="material-icons-round">support_agent</i>Contacto
                             </a>
-                            <a class="noActiveTab" href="reloj.html">
+                            <a href="reloj.html">
                                 <i class="material-icons-round">timer</i>Reloj
                             </a>
                         </div>
         </div>
     </nav>
+
     <br>
-
-    <div class="lista-empleados">
-        <h2>Lista de Empleados</h3>
-        <br>
-            <ul>
-                <li id="persons"></li>
-            </ul>
-        <br>
+    <br>
+    <br>
+    <div class="contenedor-reloj" id="contreloj">
+        <div class="itemReloj" id="hour">Reloj Digital</div>
+        <div class="itemReloj" id="date">Javascript</div>
     </div>
-
-        <div class="contact_form">
-            <div class="formulario">			
-                    <h1>Agrega un empleado</h1>
-                    <br>
-                        <form id="formListaE">				                 
-                                    <p>
-                                        <label for="firstName">Nombre</label>
-                                            <input type="text" name="firstName" id="firstName" required="marca-obligatoria">
-                                    </p>
-                                    
-                                    <p>
-                                        <label for="lastName">Apellido</label>
-                                            <input type="text" name="lastName" id="lastName" required="marca-obligatoria">
-                                    </p>
     
-                                    <button onclick="addPerson()" type="reset"><p>Agregar</p></button>				
-                        </form>
-            </div>	
-        </div>
+    <script src="assets/js/reloj.js"></script>
 </body>
-    <script src="assets/js/Persona.js"></script>
-    <script src="assets/js/listaPersonas.js"></script>
 </html>

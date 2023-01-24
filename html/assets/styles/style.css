@@ -116,7 +116,7 @@ nav {
     overflow-y: auto;
     width: 100%;
     background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, #0c74cc 60%, #0c74cc 100%, #0c74cc 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, #0c74cc 40%, #0c74cc 60%, #0c74cc 100%, #0c74cc 100%);
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid rgb(184, 184, 184);
@@ -555,4 +555,42 @@ nav {
     border-color: #c96910c0!important;
 }
 
+/* LISTA EMPLEADOS */
+
+.lista-empleados {
+    padding: 30px 30px 10px 30px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: auto;
+    background-color: #fbfbfb; 
+    font-weight: bold;
+}
+
+/* RELOJ */
+
+.contenedor-reloj {
+    font-family: "Righteous", sans-serif;
+    padding: 30px 30px 10px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #005CBF;
+    width: 500px;
+    height: 200px;
+    border-radius: 25px;
+}
+
+.itemReloj {
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+#date {
+    margin-top: 50px;
+    font-size: 30px!important;
+}
 
