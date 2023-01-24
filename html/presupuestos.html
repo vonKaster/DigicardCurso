@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/presupuestos-styles.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <title>Digicard | Presupuestos</title>
 </head>
-<body>
+<body onload="loadApp()">
     <nav>
         <div class="navbar">
                     <a href="index.html"><img src="assets/img/logodigicard.png"></a>
@@ -41,5 +42,75 @@
                         </div>
         </div>
     </nav>
+    
+    <div class="cabecero">
+        <div class="presupuesto">
+            <div class="presupuesto_titulo">
+                Presupuesto
+            </div>
+            <div class="presupuesto_valor" id="presupuesto">+ 2,000,000</div>
+            <div class="presupuesto_ingreso limpiarEstilos">
+                <div class="presupuesto_ingreso--texto">Ingresos</div>
+                <div class="derecha">
+                    <div class="presupuesto_ingreso--valor" id="ingresos">+ 3,000,000</div>
+                    <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+                </div>
+            </div>
+            <div class="presupuesto_egreso limpiarEstilos">
+                <div class="presupuesto_egreso--texto">Egresos</div>
+                <div class="derecha limpiarEstilos">
+                    <div class="presupuesto_egreso--valor" id="egresos">-1,200,000</div>
+                    <div class="presupuesto_egreso--porcentaje" id="porcentaje">45%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="forma" onsubmit="return false;">
+        <div class="agregar">
+            <div class="agregar_contenedor">
+               <select class="agregar_tipo" id="tipo">
+                <option value="ingreso" selected>+</option>
+                <option value="egreso">-</option>
+               </select> 
+               <input type="text" class="agregar_descripcion" placeholder="Agregar descripción" id="descripcion"/>
+               <input type="number" class="agregar_valor" placeholder="Valor" id="valor" step="any"/>
+               <button class="agregar_btn" onclick="addFact()">
+                <i class="material-icons-outlined">check_circle</i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="contenedor limpiarEstilos">
+        <div class="ingreso">
+            <h2 class="ingreso_titulo">Ingresos</h2>
+                <div id="lista-ingresos">
+            </div>
+        </div>
+
+        <div class="egreso">
+            <h2 class="egreso_titulo">Egresos</h2>
+                <div id="lista_egresos">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="contenedor-footer">
+            <br>
+                <h2>Hecho con <i onmouseover="colorMouseOver(this)" onmouseout="colorMouseOut(this)" class="material-icons-round">favorite</i> por Franco Caminos</h2>
+            <br>
+
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/dato.js"></script>
+    <script src="assets/js/ingreso.js"></script>
+    <script src="assets/js/egreso.js"></script>
+    <script src="assets/js/presupuestos.js"></script>
 </body>
 </html>

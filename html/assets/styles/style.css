@@ -19,7 +19,7 @@
 }
 
 body {
-
+    min-height: 100%;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
 
@@ -280,7 +280,9 @@ nav {
     transform: translateY(50%);
 }
 
-
+.espacio {
+    margin-bottom: 40px;
+}
 
 /* CONTACTO */
 
@@ -487,8 +489,9 @@ nav {
 /* FOOTER */
 
 .contenedor-footer {
+
+    height: 70px!important;
     font-family: "Righteous", sans-serif;
-    margin-top: 40px;
     border-top: 2px solid rgb(184, 184, 184);
     background-color: #226cbb;
 
