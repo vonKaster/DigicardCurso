@@ -277,5 +277,7 @@ h2 {
 .elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
 
 .contenedor-footer h2 {
-    font-family: "Righteous", sans-serif!important;
+    text-transform: none!important;
+    font-size: 1.5em!important;
+    font-weight: 600!important;
 }
