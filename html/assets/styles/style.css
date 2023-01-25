@@ -21,7 +21,7 @@
 body {
     display: grid;
     min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto auto;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
 
