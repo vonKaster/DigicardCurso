@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    min-height: 100vh!important;
+    height: 100vh!important;
     grid-template-rows: auto auto 1fr auto!important;
     color: #555;
     font-family: Open Sans;
